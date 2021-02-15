@@ -73,7 +73,7 @@ client.on('message', message => {
                                 return ['👍'].includes(reaction.emoji.name) && !player.bot;
                             };
                             
-                            const collector = response.createReactionCollector(filter, { time: 15000, dispose: true });
+                            const collector = response.createReactionCollector(filter, { dispose: true });
 
                             collector.on('collect', async (reaction, player) => {
                                 db.get('lobbies').find({ id: id }).get('players').push(player).write();
