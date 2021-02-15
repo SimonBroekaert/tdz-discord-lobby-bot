@@ -76,11 +76,13 @@ client.on('message', message => {
                             const collector = response.createReactionCollector(filter, { dispose: true });
 
                             collector.on('collect', async (reaction, player) => {
-                                db.get('lobbies').find({ id: id }).get('players').push(player).write();
-                                
                                 let players = db.get('lobbies').find({ id: id }).get('players').value();
                                 
-                                if (players.length >= size) return;
+                                if (players.length >= parseInt(size)) return;
+
+                                db.get('lobbies').find({ id: id }).get('players').push(player).write();
+
+                                players = db.get('lobbies').find({ id: id }).get('players').value();
 
                                 let playerCounter = players.length == 0 ? "No players yet..." : `${players.map(player => `${player}`).join('\n')}`;
 
