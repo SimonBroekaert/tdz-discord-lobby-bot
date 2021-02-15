@@ -1,7 +1,8 @@
 "use strict";
 
+require('dotenv').config();
+
 const Discord = require('discord.js');
-const config = require('../parameters.json');
 const low = require('lowdb')
 const FileSync = require('lowdb/adapters/FileSync')
 const { upperFirst } = require('lodash');
@@ -10,6 +11,8 @@ const adapter = new FileSync('db.json');
 const db = low(adapter);
 
 db.defaults({ lobbies: [] }).write();
+
+const prefix = "$";
 
 const client = new Discord.Client();
 
@@ -22,9 +25,9 @@ client.on('message', message => {
     const channel = message.channel;
     const user = message.member;
     // Return if message doesn't start with the prefix
-    if (!content.startsWith(config.prefix)) return;
+    if (!content.startsWith(prefix)) return;
     // Remove prefix
-    const cleanContent = content.slice(config.prefix.length);
+    const cleanContent = content.slice(prefix.length);
     // Split the content for easy use
     const contentParts = cleanContent.split(' ');
     // Get the command name
@@ -133,4 +136,4 @@ client.on('message', message => {
     message.delete();
 });
 
-client.login(config.token);
+client.login(process.env.CLIENT_TOKEN);
