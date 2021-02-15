@@ -1,0 +1,50 @@
+{
+  "lobbies": [
+    {
+      "id": 1613410381039,
+      "game": "Witch it",
+      "size": "0",
+      "players": [
+        {
+          "id": "289437963052646402",
+          "system": false,
+          "locale": null,
+          "flags": 0,
+          "username": "Sifon",
+          "bot": false,
+          "discriminator": "8632",
+          "avatar": "7e8782fbccefcfbf7f56debc452f632b",
+          "lastMessageChannelID": null,
+          "createdTimestamp": 1489077787889,
+          "defaultAvatarURL": "https://cdn.discordapp.com/embed/avatars/2.png",
+          "tag": "Sifon#8632",
+          "avatarURL": "https://cdn.discordapp.com/avatars/289437963052646402/7e8782fbccefcfbf7f56debc452f632b.webp",
+          "displayAvatarURL": "https://cdn.discordapp.com/avatars/289437963052646402/7e8782fbccefcfbf7f56debc452f632b.webp"
+        }
+      ]
+    },
+    {
+      "id": 1613410419924,
+      "game": "Witch it",
+      "size": "20",
+      "players": [
+        {
+          "id": "289437963052646402",
+          "system": false,
+          "locale": null,
+          "flags": 0,
+          "username": "Sifon",
+          "bot": false,
+          "discriminator": "8632",
+          "avatar": "7e8782fbccefcfbf7f56debc452f632b",
+          "lastMessageChannelID": null,
+          "createdTimestamp": 1489077787889,
+          "defaultAvatarURL": "https://cdn.discordapp.com/embed/avatars/2.png",
+          "tag": "Sifon#8632",
+          "avatarURL": "https://cdn.discordapp.com/avatars/289437963052646402/7e8782fbccefcfbf7f56debc452f632b.webp",
+          "displayAvatarURL": "https://cdn.discordapp.com/avatars/289437963052646402/7e8782fbccefcfbf7f56debc452f632b.webp"
+        }
+      ]
+    }
+  ]
+}
